@@ -28,9 +28,9 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 const aboutStats = [
-  { label: "Years of experience", value: "3+" },
-  { label: "Technologies mastered", value: "5+" },
-  { label: "Companies worked with", value: "15+" },
+  { label: "Years of experience", value: "1+" },
+  { label: "Technologies mastered", value: "4+" },
+  { label: "Company worked with", value: "1" },
 ];
 
 const projects = [
@@ -68,21 +68,34 @@ const projects = [
 
 const services = [
   {
-    service: "Frontend Development",
-    description:
-      "Creating stellar user interfaces and web experiences using the latest technologies.",
-    icon: Code2,
+    service: "University of Kent - BSc Computer Science",
+    description: [
+      "On track to graduate with a First Class Honours",
+      "Final year project on bespoke food reciepe website using React, Next.js, and Tailwind CSS. Comes with an AI powered chatbot for recipe recommendations.",
+    ],
+    icon: "/assets/UniKent_White_rgb.png",
   },
   {
-    service: "UX Design",
-    description:
-      "Building intuitive, user-centric designs that drive engagement and conversion.",
-    icon: Frame,
+    service: "Hiscox - Software Engineer & Infrastructure Analyst",
+    description: [
+      "Ranked 'Very-Good' in mid-year PDR (Performance-Development-Review), on track for 'Exceptional'.",
+      "Developed and deployed C# applications using .NET, Azure Terraform, and Azure DevOps, contributing to cloud-based infrastructure automation.",
+      "Implemented CI/CD pipelines for automated testing and deployment using Azure DevOps.",
+      "Created RESTful APIs and microservices with .NET Core and C#.",
+      "Collaborated with cross-functional teams to design and implement database schemas and solutions.",
+      "Conducted code reviews and mentored junior team members on best practices.",
+      "Participated in Agile development processes including daily stand-ups, sprint planning, and retrospectives.",
+      "Contributed to the continuous improvement of team processes and technical standards."
+    ],
+    icon: "/assets/HiscoxLogo.png",
   },
   {
     service: "SEO Optimization",
-    description:
-      "Enhancing your website's visibility in search engines for increased organic traffic.",
+    description: [
+      "Enhancing website visibility in search engines",
+      "Increasing organic traffic through strategic optimisation",
+      "Keyword research and implementation"
+    ],
     icon: SearchCheck,
   },
   {
@@ -91,12 +104,12 @@ const services = [
       "Designing websites that look and perform equally well on all devices and screen sizes.",
     icon: MonitorSmartphone,
   },
-  {
-    service: "Backend Development",
-    description:
-      "Developing robust, scalable server-side logic for a wide range of web applications.",
-    icon: Eye,
-  },
+  // {
+  //   service: "Backend Development",
+  //   description:
+  //     "Developing robust, scalable server-side logic for a wide range of web applications.",
+  //   icon: Eye,
+  // },
 ];
 
 export default function Home() {
@@ -190,9 +203,9 @@ export default function Home() {
               data-scroll-speed=".09"
               className="flex flex-row items-center space-x-1.5"
             >
-              <span className={styles.pill}>next.js</span>
-              <span className={styles.pill}>tailwindcss</span>
-              <span className={styles.pill}>typescript</span>
+              <span className={styles.pill}>C# (.NET)</span>
+              <span className={styles.pill}>Python</span>
+              <span className={styles.pill}>React</span>
             </div>
             <div>
               <h1
@@ -206,7 +219,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  WendoJ.
+                  Daniyal.
                 </span>
               </h1>
               <p
@@ -215,8 +228,8 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                An experienced full-stack website developer with a passion for
-                crafting unique digital experiences.
+                A junior software engineer with a passion for building
+                innovative solutions and solving problems.
               </p>
             </div>
             <span
@@ -225,7 +238,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:wendoj@proton.me" passHref>
+              <Link href="mailto:daniyalshahidanwar@gmail.com" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
@@ -269,19 +282,24 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              I&apos;m an experienced full-stack developer proficient in{" "}
+              I&apos;m an junior software engineer proficient in{" "}
               <Link
                 href="https://create.t3.gg/"
                 target="_blank"
                 className="underline"
               >
-                TypeScript, Tailwind, and Next.js
+                C# (.NET), Python, and React.
               </Link>{" "}
-              since 2021. My experience spans from startups to mid-sized
-              companies, where I&apos;ve been instrumental in the entire product
-              design process; from ideation and wireframing, through
-              prototyping, to the delivery of the final product, all while
-              efficiently collaborating with cross-functional teams.
+               I undertook a year long industrial placement at{" "}
+              <Link
+                href="https://www.hiscox.co.uk/"
+                target="_blank"
+                className="underline"
+              >
+                Hiscox
+              </Link>{" "}
+              , where I was instrumental in new API development and database
+              design.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
@@ -325,7 +343,7 @@ export default function Home() {
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
               Streamlined digital experiences.
             </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+            <p className="mt-1.5 text-base tracking-tight text-white xl:text-lg">
               I&apos;ve worked on a variety of projects, from small websites to
               large-scale web applications. Here are some of my favorites:
             </p>
@@ -404,26 +422,57 @@ export default function Home() {
                   Need more info?
                   <br />
                   <span className="text-gradient clash-grotesk tracking-normal">
-                    I got you.
+                    Sure.
                   </span>
                 </h2>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Here are some of the services I offer. If you have any
-                  questions, feel free to reach out.
+                <p className="mt-2 tracking-tighter text-secondary-foreground text-white">
+                  Here are some of the extended information about my education
+                  and experience. If you have any questions, feel free to reach
+                  out.
                 </p>
               </div>
-              {services.map((service) => (
+              {services.map((service, index) => (
                 <div
                   key={service.service}
-                  className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
+                  className={cn(
+                    "flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md",
+                    service.service.includes("Hiscox") && "md:row-span-2 flex-grow"
+                  )}
                 >
-                  <service.icon className="my-6 text-primary" size={20} />
+                  {typeof service.icon === 'string' ? (
+                    <div className="flex h-20 w-20 items-center justify-start my-6">
+                      <Image 
+                        src={service.icon} 
+                        alt={`${service.service} icon`} 
+                        width={100} 
+                        height={100} 
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="my-6 h-20 w-20 flex items-center justify-start">
+                      <service.icon className="text-primary" size={40} />
+                    </div>
+                  )}
                   <span className="text-lg tracking-tight text-foreground">
                     {service.service}
                   </span>
-                  <span className="mt-2 tracking-tighter text-muted-foreground">
-                    {service.description}
-                  </span>
+                  <ul className={cn(
+                    "mt-2 space-y-1 list-disc pl-5",
+                    service.service.includes("Hiscox") && "flex-grow"
+                  )}>
+                    {Array.isArray(service.description) ? (
+                      service.description.map((item, index) => (
+                        <li key={index} className="tracking-tighter text-muted-foreground">
+                          {item}
+                        </li>
+                      ))
+                    ) : (
+                      <li className="tracking-tighter text-muted-foreground">
+                        {service.description}
+                      </li>
+                    )}
+                  </ul>
                 </div>
               ))}
             </motion.div>
@@ -446,7 +495,7 @@ export default function Home() {
               I&apos;m currently available for freelance work and open to
               discussing new projects.
             </p>
-            <Link href="mailto:wendoj@proton.me" passHref>
+            <Link href="mailto:daniyalshahidanwar@gmail.com" passHref>
               <Button className="mt-6">Get in touch</Button>
             </Link>
           </div>
@@ -479,8 +528,8 @@ function Gradient() {
               y2="474.645"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#7980fe" />
-              <stop offset={1} stopColor="#f0fff7" />
+              <stop stopColor="#0066ff" />
+              <stop offset={1} stopColor="#80b3ff" />
             </linearGradient>
           </defs>
         </svg>
@@ -506,8 +555,8 @@ function Gradient() {
               y2="474.645"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#9A70FF" />
-              <stop offset={1} stopColor="#838aff" />
+              <stop stopColor="#003d99" />
+              <stop offset={1} stopColor="#0066ff" />
             </linearGradient>
           </defs>
         </svg>

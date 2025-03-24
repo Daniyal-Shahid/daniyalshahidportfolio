@@ -1,10 +1,9 @@
-
 /* hero */
 .intro {
     @apply flex flex-col items-start space-y-4 w-full;
 }
 .pill {
-    @apply transition border border-input bg-background flex items-center text-xs px-2.5 py-1.5 rounded-full hover:-translate-y-1 hover:bg-primary hover:text-primary-foreground duration-300;
+    @apply transition border border-input bg-background flex items-center text-xs px-2.5 py-1.5 rounded-full hover:-translate-y-1 hover:bg-primary hover:text-white duration-300 shadow-sm hover:shadow-primary/20;
 }
 .intro h1 {
     @apply pt-2 leading-tight;
@@ -20,13 +19,13 @@
 
 /* projects */
 .project-card {
-    @apply p-14 bg-white/[1%] rounded-md;
+    @apply p-14 bg-accent/[10%] rounded-md;
 }
 
 /* spline canvas */
 #canvas-container
 {
-    @apply bg-background border rounded-3xl h-[515px] xl:w-[690px] xl:min-w-[690px] overflow-hidden;
+    @apply bg-accent border-accent/20 border rounded-3xl h-[515px] xl:w-[690px] xl:min-w-[690px] overflow-hidden shadow-lg shadow-primary/5;
 
     /* this fixes the overflow:hidden in Chrome/Opera */
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);

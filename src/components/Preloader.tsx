@@ -31,7 +31,7 @@ const words = [
   "やあ",
   "Hallå",
   "Guten tag",
-  "Hallo",
+  "Salam",
 ];
 
 export default function Preloader() {
